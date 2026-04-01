@@ -1,0 +1,153 @@
+[
+  {
+    "question": "Who are the authors of the paper Attention Is All You Need?",
+    "ground_truth": "The authors are Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin.",
+    "result": {
+        "output":"The authors of the paper Attention Is All You Need are: Ashish Vaswani,Noam Shazeer,Niki Parmar,Jakob Uszkoreit, Llion Jones,Aidan N. Gomez,Łukasz Kaiser,Illia Polosukhin",
+        "RagasScore":{
+            "faithfulness":0.6076395685229589,
+            "answer_relevancy":0.8701599074536355,
+            "context_precision":0.6076395685229589,
+            "context_recall":0.5982280225939165,
+            "answer_correctness":0.7990071405756684
+        }
+    }
+  },
+  {
+    "question": "What architecture is introduced in the paper Attention Is All You Need?",
+    "ground_truth": "The paper introduces the Transformer architecture, which is based entirely on attention mechanisms without using recurrence or convolution."
+  ,
+    "result": {
+        "output":"The Transformer architecture is introduced in the paper 'Attention Is All You Need'.",
+        "RagasScore":{
+            "faithfulness":0.596702700791353,
+            "answer_relevancy":0.8944820684095509,
+            "context_precision":0.596702700791353,
+            "context_recall":0.7077891490405529,
+            "answer_correctness":0.7533838130363831
+        }
+    }
+  },
+  {
+    "question": "What is the role of masking in the decoder?",
+    "ground_truth": "Masking prevents the decoder from attending to future positions, ensuring that predictions for a position depend only on earlier positions."
+  ,
+    "result": {
+        "output":"According to Section 16 of the provided context, 'The self-attention operations in the Transformer’s decoder use a “causal” masking pattern. When producing the ith entry of the output sequence, causal masking prevents the model from attending to the jth entry of the input sequence for j > i.'",
+        "RagasScore":{
+            "faithfulness":0.8501659366073633,
+            "answer_relevancy":0.7520338954016124,
+            "context_precision":0.8501659366073633,
+            "context_recall":0.6434645599462746,
+            "answer_correctness":0.6322958101865767
+        }
+    }
+  },
+  {
+    "question": "What is multi-head attention and why is it used?",
+    "ground_truth": "Multi-head attention runs multiple attention mechanisms in parallel, allowing the model to focus on different representation subspaces and capture diverse relationships in the data."
+  ,
+    "result": {
+        "output":"Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this.",
+        "RagasScore":{
+            "faithfulness":0.8340139448865239,
+            "answer_relevancy":0.7475758516510067,
+            "context_precision":0.8340139448865239,
+            "context_recall":0.8131932761339298,
+            "answer_correctness":0.8799008146847942
+            
+        }
+    }
+  },
+ 
+  {
+    "question": "What additional objective is used in BERT besides masked language modeling?",
+    "ground_truth": "BERT uses Next Sentence Prediction (NSP), a binary classification task to determine whether two sentences follow each other in the original text."
+  ,
+    "result": {
+        "output":"During pretraining, BERT uses two objectives: masked language modeling and next sentence prediction",
+        "RagasScore":{
+            "faithfulness":0.73479266002879,    
+            "answer_relevancy":0.7276341836356083,  
+            "context_precision":0.73479266002879,   
+            "context_recall":0.5922201510164281,    
+            "answer_correctness":0.6735312335376354
+
+        }
+    }
+  },
+  {
+    "question": "What key modification does RoBERTa make compared to BERT regarding the NSP task?",
+    "ground_truth": "RoBERTa removes the Next Sentence Prediction (NSP) objective during training."
+  ,
+    "result": {
+        "output":"RoBERTa removes the Next Sentence Prediction (NSP) loss.",
+        "RagasScore":{
+            "faithfulness":0,
+            "answer_relevancy":0.5852626074425566,
+            "context_precision":0,
+            "context_recall":0,
+            "answer_correctness":0.6620074640450538
+        }
+    }
+  },
+  {
+    "question": "What is the core idea behind the Transformer architecture introduced in 'Attention Is All You Need'?",
+    "ground_truth": "The Transformer relies entirely on self-attention mechanisms to model dependencies between input and output sequences, eliminating recurrence and convolution."
+  ,
+    "result": {
+        "output":"The primary building block of the Transformer is self-attention. Self-attention is a variant of attention that processes a sequence by replacing each element with a weighted average of the rest of the sequence.",
+        "RagasScore":{
+            "faithfulness":0,
+            "answer_relevancy":0.6114299035063441,
+            "context_precision":0,
+            "context_recall":0,
+            "answer_correctness":0.7965311744265224
+        }
+    }
+  },
+  {
+    "question": "What is scaled dot-product attention in the Transformer?",
+    "ground_truth": "Scaled dot-product attention computes attention weights by taking the dot product of queries and keys, scaling by the square root of their dimension, applying softmax, and multiplying by values."
+  ,
+    "result": {
+        "output":"According to Section 3.2 of the provided context, 'Scaled Dot-Product Attention' is defined as:  'We call our particular attention 'Scaled Dot-Product Attention' (Figure 2). The input consists of queries and keys of dimension dk, and values of dimension dv. We compute the dot products of the query with all keys, divide each by √dk, and apply a softmax function to obtain the weights on the values.'",
+        "RagasScore":{
+            "faithfulness":0.7652651062891939,
+            "answer_relevancy":0.6927487642099881,
+            "context_precision":0.7652651062891939,
+            "context_recall":0.814485552488733,
+            "answer_correctness":0.8071038470494699
+        }
+    }
+  },
+  {
+    "question": "What is the main idea of GPT-3's few-shot learning capability?",
+    "ground_truth": "GPT-3 can perform tasks using only a few examples provided in the input context, without requiring gradient updates or fine-tuning."
+  ,
+    "result": {
+        "output":"According to Section 4 of the provided context, in the few-shot setting, GPT-3 achieves strong results on tasks such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. However, it struggles with certain datasets like ANLI and RACE, and faces methodological issues related to training on large web corpora. The main idea of GPT-3's few-shot learning capability is not explicitly stated in the provided context.",
+        "RagasScore":{
+            "faithfulness":0,
+            "answer_relevancy":0.859642248476427,
+            "context_precision":0,
+            "context_recall":0,
+            "answer_correctness":0.7325412390533098
+        }
+    }
+  },
+  {
+    "question": "Why is transfer learning important in modern NLP models like BERT and T5?",
+    "ground_truth": "Transfer learning allows models to learn general language representations from large unlabeled datasets and then apply this knowledge to downstream tasks, improving performance and reducing the need for large labeled datasets.",
+    "result": {
+        "output":"Transfer learning is important in modern NLP models like BERT and T5 because it enables the use of pre-trained models in data-scarce settings, allowing for leveraging general-purpose abilities and knowledge developed during pre-training to tackle a broad set of NLP tasks.",
+        "RagasScore":{
+            "faithfulness":0.7529829448119981,
+            "answer_relevancy":0.8247514311422656,
+            "context_precision":0.7529829448119981,
+            "context_recall":0.7676943856000807,
+            "answer_correctness":0.8591332566821651
+        }
+    }
+  }
+]
