@@ -30,7 +30,7 @@ This application enables users to upload PDF documents and ask questions about t
 │  Vector Search (FAISS, k=20)          │ + │  BM25 Keyword Search (k=20)|
 │  - Semantic similarity                │   │  - TF-IDF term matching    |
 └──────────────┬────────────────────────┘   └─────────────┬──────────────┘
-               ▼                                           ▼
+               ▼                                          ▼
 ┌────────────────────────────────────────────────────────┐
 │         Merge & Deduplicate Retrieved Docs             │
 └──────────────────────┬─────────────────────────────────┘
