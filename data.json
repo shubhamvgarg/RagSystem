@@ -1,0 +1,47 @@
+[
+  {
+    "question": "Who are the authors of the paper Attention Is All You Need?",
+    "ground_truth": "The authors are Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin."
+  },
+  {
+    "question": "What architecture is introduced in the paper Attention Is All You Need?",
+    "ground_truth": "The paper introduces the Transformer architecture, which is based entirely on attention mechanisms without using recurrence or convolution."
+  },
+  {
+    "question": "What is the role of masking in the decoder?",
+    "ground_truth": "Masking prevents the decoder from attending to future positions, ensuring that predictions for a position depend only on earlier positions."
+  },
+  {
+    "question": "What is multi-head attention and why is it used?",
+    "ground_truth": "Multi-head attention runs multiple attention mechanisms in parallel, allowing the model to focus on different representation subspaces and capture diverse relationships in the data."
+  },
+ 
+  {
+    "question": "What additional objective is used in BERT besides masked language modeling?",
+    "ground_truth": "BERT uses Next Sentence Prediction (NSP), a binary classification task to determine whether two sentences follow each other in the original text."
+  },
+  {
+    "question": "What key modification does RoBERTa make compared to BERT regarding the NSP task?",
+    "ground_truth": "RoBERTa removes the Next Sentence Prediction (NSP) objective during training."
+  },
+  {
+    "question": "How does RoBERTa improve performance over the original BERT model?",
+    "ground_truth": "RoBERTa improves performance by training longer, using larger batch sizes, more data, longer sequences, and dynamic masking strategies."
+  },
+  {
+    "question": "What is the core idea behind the Transformer architecture introduced in 'Attention Is All You Need'?",
+    "ground_truth": "The Transformer relies entirely on self-attention mechanisms to model dependencies between input and output sequences, eliminating recurrence and convolution."
+  },
+  {
+    "question": "What is scaled dot-product attention in the Transformer?",
+    "ground_truth": "Scaled dot-product attention computes attention weights by taking the dot product of queries and keys, scaling by the square root of their dimension, applying softmax, and multiplying by values."
+  },
+  {
+    "question": "What is the main idea of GPT-3's few-shot learning capability?",
+    "ground_truth": "GPT-3 can perform tasks using only a few examples provided in the input context, without requiring gradient updates or fine-tuning."
+  },
+  {
+    "question": "Why is transfer learning important in modern NLP models like BERT and T5?",
+    "ground_truth": "Transfer learning allows models to learn general language representations from large unlabeled datasets and then apply this knowledge to downstream tasks, improving performance and reducing the need for large labeled datasets."
+  }
+]
